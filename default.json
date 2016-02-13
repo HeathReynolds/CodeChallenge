@@ -1,0 +1,70 @@
+{
+	"name": "APITest",
+	"externalHDFS": null,
+	"distro": "bigtop",
+	"distroVendor": "BIGTOP",
+	"networkConfig": {
+		"MGT_NETWORK": ["defaultNetwork"]
+	},
+	"topologyPolicy": "NONE",
+	"nodeGroups": [{
+		"name": "master",
+		"roles": [
+			"hadoop_namenode",
+			"hadoop_resourcemanager"
+		],
+		"cpuNum": 2,
+		"memCapacityMB": 3500,
+		"swapRatio": 1.0,
+		"storage": {
+			"type": "SHARED",
+			"shares": null,
+			"sizeGB": 10,
+			"dsNames": null,
+			"splitPolicy": null,
+			"controllerType": null,
+			"allocType": null
+		},
+		"instanceNum": 1
+	}, {
+		"name": "worker",
+		"roles": [
+			"hadoop_datanode",
+			"hadoop_nodemanager"
+		],
+		"cpuNum": 1,
+		"memCapacityMB": 1024,
+		"swapRatio": 1.0,
+		"storage": {
+			"type": "SHARED",
+			"shares": null,
+			"sizeGB": 10,
+			"dsNames": null,
+			"splitPolicy": null,
+			"controllerType": null,
+			"allocType": null
+		},
+		"instanceNum": 2
+	}, {
+		"name": "client",
+		"roles": [
+			"hadoop_client",
+			"pig",
+			"hive",
+			"hive_server"
+		],
+		"cpuNum": 1,
+		"memCapacityMB": 1024,
+		"swapRatio": 1.0,
+		"storage": {
+			"type": "SHARED",
+			"shares": null,
+			"sizeGB": 10,
+			"dsNames": null,
+			"splitPolicy": null,
+			"controllerType": null,
+			"allocType": null
+		},
+		"instanceNum": 1
+	}]
+}
