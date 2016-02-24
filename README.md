@@ -1,18 +1,12 @@
-# CodeChallenge
-For our first unofficial EMC CodeChallenge (details on #EMC on CodeCommunity slack, EMC/VCE only) we are working with VMware Big Data Extensions and the Serengeti API. Big Data Extensions is a cluster management layer that orcestrates the creation of Hadoop clousters. Our goal is to pass a json file to the serengeti API, with specific fields being inputed by the end user as part of a request. 
 
 default.json is provided as an example of a working .json file that defines single tier hadoop cluster with HDFS being run localy (nodes are both data and compute). The only variables that need to be passed through from end user input to leverage default.json are the cluster name and the node quantites.
+ 
 
-compute.json will be provided soon. Compute.json is a working example that defines a compute only hadoop cluster, HDFS runs remotly and nodes are compute only. Variables that need to be passed through from end user input to leverage compute.json are the cluster name, node quantities, and an HDFS location. 
+Serengetit REST Documentation - http://xxx.xxx.xxx.xxx:8080/restschema/service?APPLICATION=BigDataExtensions
 
-Accessing the lab enviroment : 
-There is a lab with BDE running inside the EMC network 
+Serengeti API - https://xxx.xxx.xxx.xxx:8443/serengeti/api
 
-Serengetit REST Documentation - http://10.25.90.124:8080/restschema/service?APPLICATION=BigDataExtensions
-
-Serengeti API - https://10.25.90.124:8443/serengeti/api
-
-Serengeti API leverages cookies for auth, example (user/pass in private slack, email me to be added) : 
+Serengeti API leverages cookies for auth, example : 
 
 curl -c cookies.txt -i -k -d 'j_username=******@vsphere.local&j_password=******' -X POST https://10.25.90.124:8443/serengeti/j_spring_security_check
 
