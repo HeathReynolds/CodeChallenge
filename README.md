@@ -1,3 +1,4 @@
+Blog post with a little more detail : http://www.heathreynolds.com/2016/02/leveraging-serengeti-api-with-vmware.html
 
 default.json is provided as an example of a working .json file that defines single tier hadoop cluster with HDFS being run localy (nodes are both data and compute). The only variables that need to be passed through from end user input to leverage default.json are the cluster name and the node quantites.
  
